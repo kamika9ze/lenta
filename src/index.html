@@ -1,0 +1,77 @@
+<html>
+<head>
+	@@include('./parts/head.html')
+</head>
+	<body>
+		<div class="left_menu">
+		    <div class="wrap">
+		        <ul class="menu_list">
+		            <li class="list_item"><a href="https://lenta.ru/" target="_blank">Главное</a></li>
+		            <li class="list_item"><a href="https://lenta.ru/rubrics/russia/" target="_blank">Россия</a></li>
+		            <li class="list_item"><a href="https://lenta.ru/rubrics/world/" target="_blank">Мир</a></li>
+		            <li class="list_item"><a href="https://lenta.ru/rubrics/ussr/" target="_blank">Бывшая СССР</a></li>
+		            <li class="list_item"><a href="https://lenta.ru/rubrics/economics/" class="finance"
+		                                     target="_blank">Финансы</a></li>
+		            <li class="list_item"><a href="https://lenta.ru/rubrics/business/" target="_blank">Бизнес</a></li>
+		            <li class="list_item"><a href="https://lenta.ru/rubrics/forces/" target="_blank">Силовые структуры</a></li>
+		            <li class="list_item"><a href="https://lenta.ru/rubrics/science/" target="_blank">Наука и техника</a></li>
+		            <li class="list_item"><a href="https://lenta.ru/rubrics/culture/" target="_blank">Культура</a></li>
+		            <li class="list_item"><a href="https://lenta.ru/rubrics/sport/" target="_blank">Спорт</a></li>
+		            <li class="list_item"><a href="https://lenta.ru/rubrics/media/" target="_blank">Интернет и СМИ</a></li>
+		            <li class="list_item"><a href="https://lenta.ru/rubrics/style/" target="_blank">Ценности</a>
+		            </li>
+		            <li class="list_item"><a href="https://lenta.ru/rubrics/travel/" target="_blank">Путешествия</a></li>
+		            <li class="list_item"><a href="https://lenta.ru/rubrics/life/" target="_blank">Из жизни</a></li>
+
+		            <li class="delimiter"></li>
+
+		            <li class="list_dawn"><a href="https://motor.ru/" target="_blank">Мотор</a></li>
+		            <li class="list_dawn"><a href="http://dom.lenta.ru/" target="_blank">Дом</a></li>
+
+		            <li class="delimiter"></li>
+
+		            <li class="list_dawn"><a href="https://lenta.ru/parts/text/" target="_blank">Статьи</a></li>
+		            <li class="list_dawn"><a href="https://lenta.ru/parts/photo/" target="_blank">Галереи</a></li>
+		            <li class="list_dawn"><a href="https://lenta.ru/parts/video/" target="_blank">Видео</a></li>
+		            <li class="list_dawn"><a href="https://lenta.ru/parts/opinions/" target="_blank">Мнения</a></li>
+		            <li class="list_dawn"><a href="https://lenta.ru/specprojects/" target="_blank">Спецпроекты</a></li>
+		            <div class="age">
+		                <img src="./assets/img/age.png">
+		            </div>
+		        </ul>
+		    </div>
+		</div>
+		<div class="content content-sber">
+			@@include('./parts/header.html')
+			<div class="section">
+				<div class="section-left">
+					<a href="#" class="section-logo"><img src="./assets/images/logo-sber.png" alt=""></a>
+					<div class="section-title">Давай пожмем <br>друг другу руки</div>
+					<p>Любая крупная сделка, в особенности та, что касается покупки или продажи недвижимости, может пойти не так гладко, как того хотят обе стороны. Внезапная пропажа денег, хищения, аферы с наличными — что угодно. Как избежать подобных проблем, к чему стоит быть готовыми, а также что нужно сделать, чтобы любая сделка прошла без сучка и задоринки — в этом проекте.</p>
+				</div>
+				<div class="section-right"></div>
+			</div>
+			<div class="section section-history section-history1">
+				<div class="section-left">
+					<div class="section-history-title"></div>
+				</div>
+				<div class="section-right"></div>
+			</div>
+			@@include('./parts/footer.html')			
+		</div>
+		<script type="text/javascript" src="./assets/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="./assets/js/app.js"></script>
+		<script type="text/javascript" src="./assets/js/aos.js"></script>
+		<script>
+		    $(document).ready(function () {
+		        AOS.init({
+		            disable: 'mobile',
+		            offset: 200,
+		            duration: 400,
+		            easing: 'ease-in-sine',
+		        });
+		    });
+
+		</script>
+	</body>
+</html>
