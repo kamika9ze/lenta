@@ -154,6 +154,9 @@
   display: inline-block;
   margin-bottom: 110px;
 }
+.section-history-hide-text {
+  display: none;
+}
 .section1 {
   position: absolute;
   bottom: -16px;
