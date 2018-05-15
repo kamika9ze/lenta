@@ -1,3 +1,7 @@
+.content-sber {
+  width: 1080px;
+  overflow-x: hidden;
+}
 .content .top .text {
   float: none;
   display: table-cell;
@@ -12,9 +16,11 @@
   display: inline-block;
 }
 .section {
-  display: inline-block;
-  padding-left: 50px;
-  background: url('../images/bg-section-sber.png');
+  display: table;
+  background: url('../images/SB/bg-section-sber.png');
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 .section p {
   font-size: 18px;
@@ -23,6 +29,16 @@
   font-weight: bold;
   font-style: italic;
   line-height: 1.556;
+  text-align: left;
+  margin-bottom: 42px;
+}
+.section-history p {
+  font-size: 18px;
+  font-family: "PTSerif";
+  color: #ffffff;
+  line-height: 1.556;
+  font-style: normal;
+  font-weight: normal;
   text-align: left;
   margin-bottom: 42px;
 }
@@ -43,17 +59,104 @@
   position: absolute;
   top: -19px;
   left: 142px;
-  background: url('../images/img-dove.png') no-repeat;
+  background: url('../images/SB/dove.png') no-repeat;
 }
 .section > div {
-  float: left;
-  display: inline-block;
+  float: none;
+  padding-bottom: 40px;
+  position: relative;
+  display: table-cell;
   box-sizing: border-box;
 }
 .section-left {
-  width: 48%;
-  padding-right: 37px;
+  width: 49%;
+  padding-left: 50px;
+  padding-right: 60px;
 }
 .section-right {
-  width: 52%;
+  width: 51%;
+}
+.section-history .section-right {
+  background: #f1e8cc;
+}
+.section-history-title {
+  display: inline-block;
+  width: 100%;
+  background: #309b42;
+  font-family: "PTSans";
+  font-size: 32px;
+  line-height: 1;
+  color: #ffffff;
+  position: relative;
+  padding: 30px 10px 34px 0;
+  margin-bottom: 45px;
+}
+.section-history-title:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 12px 0 12px;
+  border-color: #6ab9b0 transparent transparent transparent;
+  position: absolute;
+  left: -10px;
+  top: 0;
+  z-index: 2;
+}
+.section-history-title:after {
+  content: "";
+  width: 100px;
+  height: 100%;
+  right: 100%;
+  top: 0;
+  position: absolute;
+  background: #309b42;
+}
+.section-history-number {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: left;
+  width: 100%;
+  display: inline-block;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.section-history-title-bg-bottom {
+  background: #309b42;
+  height: calc(100% + 25px);
+  width: calc(105px + 60px);
+  position: absolute;
+  top: 0;
+  right: -60px;
+}
+.section-history-title-bg-bottom:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 41px 0 41px;
+  border-color: #309b42 transparent transparent transparent;
+  position: absolute;
+  left: -41px;
+  bottom: 0;
+}
+.section-history-btn {
+  background-color: #309b42;
+  width: 158px;
+  height: 50px;
+  text-align: center;
+  font-size: 17px;
+  font-family: "PTSans";
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 1.529;
+  display: inline-block;
+  margin-bottom: 110px;
+}
+.section1 {
+  position: absolute;
+  bottom: -16px;
+  left: -44px;
+  z-index: 2;
 }
