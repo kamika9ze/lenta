@@ -205,7 +205,7 @@
 }
 .section1 {
   bottom: -16px;
-  left: -44px;
+  left: -43px;
   z-index: 2;
 }
 .section-history-img1 {
@@ -349,21 +349,59 @@
   line-height: 1.5;
   text-align: left;
 }
+.img-none-dectope {
+  display: none;
+}
+.img-mobile-section9 {
+  display: none;
+}
+.childr {
+  position: absolute;
+  right: -12px;
+  top: 162px;
+  z-index: 3;
+}
+.flower {
+  position: absolute;
+  top: 590px;
+  right: -10px;
+  z-index: 2;
+}
+.section-history9 .section-history-btn {
+  position: relative;
+}
+.section-history9 .section-history-btn:before {
+  content: "";
+  width: 35px;
+  height: 40px;
+  background: url('../images/SB/dove2.png') no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: calc(100% - 3px);
+  right: 0;
+}
 @media (max-width: 1080px) {
   .content-sber {
     width: 100%;
   }
-  .section-history {
-    padding-left: 63px;
+  .section:not(.section-history) {
+    position: relative;
   }
+  .section-history,
   .section:not(.section-history) .section-right {
     padding-left: 63px;
+    padding-left: 9.84375vw;
   }
   .section:not(.section-history) .section-left {
     padding-left: 22px;
+    padding-left: 3.4375vw;
   }
   .section-history .section-left {
     background: #f1e8cc;
+  }
+  .section-history2 .section-right {
+    padding-bottom: 532px;
+    padding-bottom: 83.4375vw;
   }
   .section > div {
     width: 100%;
@@ -381,8 +419,11 @@
   }
   .section-logo {
     width: 188px;
+    width: 29.375vw;
     height: 36px;
+    height: 5.625vw;
     margin: 27px 0 63px;
+    margin: 4.21875vw 0 9.84375vw;
   }
   .section-logo img {
     width: 100%;
@@ -395,51 +436,78 @@
   }
   .section-title {
     font-size: 62px;
+    font-size: 9.6875vw;
     line-height: 1.032;
   }
   .section-title:before {
     width: 49px;
+    width: 7.65625vw;
     height: 55px;
+    height: 8.59375vw;
     top: -28px;
+    top: -4.375vw;
     left: 214px;
+    left: 33.4375vw;
     background-size: contain;
   }
   .section p {
     font-size: 28px;
+    font-size: 4.375vw;
     line-height: 1.228;
   }
   .section-history p {
     font-size: 28px;
+    font-size: 4.375vw;
     color: #212121;
     line-height: 1.5;
     margin: 0 0 84px 45px;
+    margin: 0 0 13.125vw 7.03125vw;
+    z-index: 4;
+    position: relative;
   }
   .section-history-btn {
     width: 289px;
+    width: 45.15625vw;
     height: 91px;
+    height: 14.21875vw;
     font-size: 31px;
+    font-size: 4.84375vw;
     margin: 0 0 145px 45px;
+    margin: 0 0 22.65625vw 7.03125vw;
+    z-index: 3;
+    position: relative;
   }
   .section-history-number {
     font-size: 28px;
+    font-size: 4.375vw;
   }
   .section-history-title-text {
     font-size: 46px;
+    font-size: 7.1875vw;
+    padding-right: 5vw;
+    display: inline-block;
   }
   .section-history-title {
-    padding: 48px 10px 50px 27;
+    padding: 48px 10px 50px 27px;
+    padding: 7.5vw 1.5625vw 7.8125vw 4.21875vw;
     margin-bottom: 55px;
+    margin-bottom: 8.59375vw;
   }
   .section-history-title-bg-bottom {
     height: calc(100% + 32px);
+    height: calc(100% + 5vw);
     width: 95px;
+    width: 14.84375vw;
     right: 37px;
+    right: 5.78125vw;
   }
   .section-history-title-bg-bottom:before {
     border-width: 33px 41px 0 41px;
+    border-width: 5.15625vw 6.40625vw 0 6.40625vw;
     left: -41px;
+    left: -6.40625vw;
   }
-  .section > div .cloud {
+  .section .cloud {
     position: absolute;
   }
   .content-sber .top {
@@ -448,37 +516,176 @@
   }
   .cloud1 {
     top: 78px;
+    top: 12.1875vw;
     left: 280px;
+    left: 43.75vw;
+    width: 137px;
+    width: 21.40625vw;
   }
   .cloud2 {
     top: -679px;
+    top: -2.50937vw;
     right: -32px;
+    right: -5vw;
+    width: 136px;
+    width: 21.25vw;
+  }
+  .cloud3 {
+    top: 140px;
+    top: 21.875vw;
+    left: 53px;
+    left: 8.28125vw;
+    width: 72px;
+    width: 11.25vw;
+  }
+  .cloud5 {
+    right: 200px;
+    right: 42.25vw;
+    top: 11vw;
+    /* bottom: calc(100% + 575px); */
+    /* bottom: calc(100% + 89.84375vw); */
+    width: 72px;
+    width: 11.25vw;
   }
   .section1 {
     max-width: initial;
+    left: -44px;
+    left: -7.175vw;
+    z-index: 2;
+    width: calc(100% + 44px);
+    width: calc(100% + 6.875vw);
   }
   .section-history-img1 {
     top: 0;
     left: 11px;
+    left: 1.71875vw;
     width: 553px;
+    width: 86.4vw;
     margin-bottom: 30px;
+    margin-bottom: 4.6875vw;
     z-index: 2;
+  }
+  .section > div .section-history-img4 {
+    width: 590px;
+    width: 92.1875vw;
+    position: absolute;
+  }
+  .section-history-img8 {
+    top: -25px;
+    top: -3.9vw;
+    left: 65px;
+    left: 10.15625vw;
+    width: 434px;
+    width: 67.8125vw;
+  }
+  .section-history-img10 {
+    width: 434px;
+    width: 67.8125vw;
+    top: -29px;
+    top: -4.53125vw;
+    left: 67px;
+    left: 10.46875vw;
+  }
+  .section-history-img13 {
+    top: -31px;
+    top: -4.84375vw;
+    left: 52px;
+    left: 8.125vw;
+    width: 460px;
+    width: 71.875vw;
+  }
+  .section-history-img17 {
+    top: -29px;
+    top: -4.53125vw;
+    left: 42px;
+    left: 6.5625vw;
+    width: 460px;
+    width: 71.875vw;
+  }
+  .section-history-img21 {
+    top: -21px;
+    top: -3.28125vw;
+    left: 55px;
+    left: 8.59375vw;
+    width: 460px;
+    width: 71.875vw;
+  }
+  .section-history-img25 {
+    top: -70px;
+    top: -10.9375vw;
+    left: 0;
+    width: 100%;
   }
   .section-history-img26 {
     position: absolute;
     max-width: initial;
     width: 839px;
+    width: 131.0937vw;
     left: 0;
+  }
+  .img-mobile-section9 {
+    display: inline-block;
+    position: absolute!important;
+    left: -63px;
+    left: -9.84375vw;
+    bottom: 0;
+    max-width: initial;
+    width: calc(100% + 63px);
+    width: calc(100% + 9.84375vw);
+  }
+  .section-history9 .section-right {
+    display: none;
+  }
+  .section-history9 .section-left {
+    padding-bottom: 443px;
+    padding-bottom: 69.21875vw;
+  }
+  .section-history-img28 {
+    bottom: calc(100% - 4px);
+    right: 60px;
+    right: 9.375vw;
+    left: initial;
+    position: absolute;
+    z-index: 3;
+    width: 111px;
+    width: 17.34375vw;
+  }
+  .img-none-dectope {
+    display: inline-block;
+  }
+  .img-mobile-section92 {
+    position: absolute;
+    bottom: calc(100% + 33vw);
+    right: 60px;
+    right: 16.1vw;
+    left: initial;
+    z-index: 3;
+  }
+  .section-history-title:before {
+    background: url('../images/SB/title-before-mobile.png') no-repeat;
+    background-size: contain;
+    width: 33px;
+    width: 5.15625vw;
+    height: 8px;
+    height: 1.25vw;
+    border: none;
+    left: -15.6px;
+    left: -2.4375vw;
+    top: -0.09vw;
   }
   .footer {
     padding: 62px 43px 69px 38px;
+    padding: 9.6875vw 6.71875vw 10.78125vw 5.9375vw;
   }
   .copy {
     font-size: 32px;
+    font-size: 5vw;
     margin-bottom: 44px;
+    margin-bottom: 6.875vw;
   }
   .footer p {
     font-size: 24px;
+    font-size: 3.75vw;
     line-height: 1.3;
   }
 }
