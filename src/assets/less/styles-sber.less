@@ -85,7 +85,7 @@
 }
 .section > div {
 	float: none;
-	padding-bottom: 40px;
+	padding-bottom: 130px;
 	position: relative;
 	display: table-cell;
     box-sizing: border-box;
@@ -98,6 +98,24 @@
 }
 .section-right {
 	width: 51%;
+}
+.social {
+	position: absolute;
+	right: 10px;
+	top: 34px;
+	z-index: 2;
+	li {
+		padding-right: 28px;
+		display: inline-block;
+		float: left;
+		a {	
+			display: inline-block;
+		}
+		img {
+			position: relative;
+			height: 16px;
+		}
+	}
 }
 .section-history .section-right {
 	background: #f1e8cc;
@@ -206,19 +224,19 @@
 	position: absolute;
 }
 .cloud1 {
-	top: 48px;
+	top: 78px;
 	left: -44px;
 }
 .cloud2 {
-	top: 32px;
+	top: 62px;
 	right: -32px;
 }
 .cloud3 {
-    top: 108px;
+    top: 138px;
     left: 258px;
 }
 .cloud4 {
-	top: 198px;
+	top: 228px;
 	left: 110px;
 }
 .section-history-img-window-right {
@@ -374,6 +392,16 @@
 	color: rgb(255, 255, 255);
 	line-height: 1.5;
 	text-align: left;
+	&:first-child {
+		margin-bottom: 25px;		
+	}
+    a {
+    	text-decoration: underline;
+		color: rgb(255, 255, 255);
+    	&:hover {
+    		text-decoration: none;
+    	}
+    }
 }
 .img-none-dectope {
 	display: none;
@@ -412,6 +440,27 @@
 	}
 	.section {
 		// display: inline-block;
+	}
+	.social {
+		position: absolute;
+		right: 0px;
+		top: 27px;
+		top: 4.21875vw;
+		z-index: 2;
+		li {
+			padding-right: 55px;
+			padding-right: 8.59375vw;
+			display: inline-block;
+			float: left;
+			a {	
+				display: inline-block;
+			}
+			img {
+				position: relative;
+				height: 32px;
+				height: 5vw;
+			}
+		}
 	}
 	.section:not(.section-history) {
 		position: relative;
