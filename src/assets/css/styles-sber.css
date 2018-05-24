@@ -45,6 +45,12 @@
   text-align: left;
   margin-bottom: 42px;
 }
+.section p a {
+  color: #333333;
+}
+.section p a:hover {
+  text-decoration: none;
+}
 .section-history p {
   font-size: 18px;
   font-family: "PTSerif";
