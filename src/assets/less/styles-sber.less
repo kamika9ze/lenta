@@ -23,6 +23,10 @@
 .section-logo {
 	margin: 13px 0 22px;
 	display: inline-block;
+    width: 131px;
+    img {
+    	width: 100%;
+    }
 }
 .section {
     display: table;
@@ -42,6 +46,7 @@
 	margin-bottom: 42px;
 	a {
 		color: #333333;
+		text-decoration: none;
 		&:hover {
 			text-decoration: none;
 		}
@@ -59,6 +64,7 @@
 }
 .section-history ul {
 	padding: 0;
+	list-style: none;
 }
 .section-history ul li {
 	font-size: 18px;
@@ -66,7 +72,7 @@
 	color: #333333;
 	line-height: 1.556;
 	font-style: italic;
-	font-weight: normal;
+	font-weight: bold;
 	text-align: left;
 	margin-bottom: 42px;
 }
@@ -79,6 +85,7 @@
 	line-height: 1.077;
 	text-align: left;
 	margin-bottom: 28px;
+    margin-top: 33px;
 }
 .section-title:before {
 	content: "";
@@ -91,7 +98,7 @@
 }
 .section > div {
 	float: none;
-	padding-bottom: 130px;
+	padding-bottom: 86px;
 	position: relative;
 	display: table-cell;
     box-sizing: border-box;
@@ -200,19 +207,26 @@
 .section-history-btn {
 	background-color: rgb(48, 155, 66);
 	width: 158px;
-	height: 50px;
+	line-height: 50px;
 	text-align: center;
 	font-size: 17px;
 	font-family: "PTSans";
 	color: rgb(255, 255, 255);
 	font-weight: bold;
-	line-height: 1.529;
 	display: inline-block;
-	margin-bottom: 110px;
+	margin-bottom: 40px;
 	cursor: pointer;
+	text-decoration: none;
 }
 .section-history-hide-text {
 	display: none;
+}
+.btn-top-section-history {
+	background: url('../images/SB/ico-btn-top.png');
+	width: 12px;
+	height: 18px;
+	display: inline-block;
+	margin-left: 32px;
 }
 .section-history9 > div {
 	padding-bottom: 384px;
@@ -230,19 +244,19 @@
 	position: absolute;
 }
 .cloud1 {
-	top: 78px;
+	top: 38px;
 	left: -44px;
 }
 .cloud2 {
-	top: 62px;
+	top: 32px;
 	right: -32px;
 }
 .cloud3 {
-    top: 138px;
+    top: 98px;
     left: 258px;
 }
 .cloud4 {
-	top: 228px;
+	top: 188px;
 	left: 110px;
 }
 .section-history-img-window-right {
@@ -560,8 +574,8 @@
 	.section-history-btn {
 	    width: 289px;
 	    width: 45.15625vw;
-	    height: 91px;
-	    height: 14.21875vw;
+	    line-height: 91px;
+	    line-height: 14.21875vw;
 	    font-size: 31px;
 	    font-size: 4.84375vw;
 	    margin: 0 0 145px 45px;
