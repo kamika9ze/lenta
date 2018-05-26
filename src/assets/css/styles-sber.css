@@ -134,6 +134,31 @@
   position: relative;
   height: 16px;
 }
+.social .ya-share2__title {
+  display: none;
+}
+.social .ya-share2__icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.social .ya-share2__item {
+  padding: 0 22px 0 0;
+}
+.social .ya-share2__item_service_odnoklassniki .ya-share2__icon {
+  background-image: url("../images/SB/ok.png");
+}
+.social .ya-share2__item_service_facebook .ya-share2__icon {
+  background-image: url("../images/SB/fb.png");
+}
+.social .ya-share2__item_service_twitter .ya-share2__icon {
+  background-image: url("../images/SB/tv.png");
+}
+.social .ya-share2__item_service_vkontakte .ya-share2__icon {
+  background-image: url("../images/SB/vk.png");
+}
 .section-history .section-right {
   background: #f1e8cc;
 }
