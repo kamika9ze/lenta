@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth; /* свойство scroll-behavior не наследуется, применяется к прокручиваемым блокам */ 
+}
 .content-sber {
 	width: 1080px;
 }
@@ -21,7 +24,7 @@
     background: #fff;
 }
 .section-logo {
-	margin: 13px 0 22px;
+	margin: 32px 0 22px;
 	display: inline-block;
     width: 131px;
     img {
@@ -52,29 +55,39 @@
 		}
 	}
 }
-.section-history p {
-	font-size: 18px;
-	font-family: "PTSerif";
-	color: #333333;
-	line-height: 1.556;
-	font-style: normal;
-	font-weight: normal;
-	text-align: left;
-	margin-bottom: 42px;
-}
-.section-history ul {
-	padding: 0;
-	list-style: none;
-}
-.section-history ul li {
-	font-size: 18px;
-	font-family: "PTSerif";
-	color: #333333;
-	line-height: 1.556;
-	font-style: italic;
-	font-weight: bold;
-	text-align: left;
-	margin-bottom: 42px;
+.section-history {
+	p {
+		font-size: 18px;
+		font-family: "PTSerif";
+		color: #333333;
+		line-height: 1.556;
+		font-style: normal;
+		font-weight: normal;
+		text-align: left;
+		margin-bottom: 42px;
+	}
+	ul {
+		padding: 0;
+		list-style: none;
+		li {
+			font-size: 18px;
+			font-family: "PTSerif";
+			color: #333333;
+			line-height: 1.556;
+			font-style: italic;
+			font-weight: bold;
+			text-align: left;
+			margin-bottom: 42px;
+		}
+	}
+	.points {
+		display: inline-block;
+	}
+	&.active {
+		.points {
+			display: none;
+		}
+	}
 }
 .section-title {
 	position: relative;

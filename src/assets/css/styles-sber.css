@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+  /* свойство scroll-behavior не наследуется, применяется к прокручиваемым блокам */
+}
 .content-sber {
   width: 1080px;
 }
@@ -26,7 +30,7 @@
   background: #fff;
 }
 .section-logo {
-  margin: 13px 0 22px;
+  margin: 32px 0 22px;
   display: inline-block;
   width: 131px;
 }
@@ -79,6 +83,12 @@
   font-weight: bold;
   text-align: left;
   margin-bottom: 42px;
+}
+.section-history .points {
+  display: inline-block;
+}
+.section-history.active .points {
+  display: none;
 }
 .section-title {
   position: relative;

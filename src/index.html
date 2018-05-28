@@ -48,15 +48,18 @@
 					<img src="./assets/images/SB/cloud2.png" alt="" class="cloud cloud2 img-none-dectope">
 					<img src="./assets/images/SB/cloud3.png" alt="" class="cloud cloud5 img-none-dectope">
 					<div class="section-left">
-						<a href="#" class="section-logo" onclick="gtag('event', 'logo-sberbank', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'logo-sberbank', });"><img src="./assets/images/SB/logo-sber.svg" alt=""></a>
+						<a href="https://www.sberbank.ru" class="section-logo" onclick="gtag('event', 'logo-sberbank', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'logo-sberbank', });" target="blank"><img src="./assets/images/SB/logo-sber.svg" alt=""></a>
 						<div class="section-title" data-aos="fade-down">Давай пожмем <br>друг другу руки</div>
 						<p data-aos="fade-up">Любая крупная сделка, в&nbsp;особенности&nbsp;та, что касается покупки или продажи недвижимости, может пойти не&nbsp;так гладко, как того хотят обе стороны. К&nbsp;чему стоит быть готовым и&nbsp;как избежать проблем с&nbsp;расчетами по&nbsp;сделке&nbsp;&mdash; в&nbsp;этом проекте Сбербанк и&nbsp;<a href="https://lenta.ru">Lenta.ru</a></p>
 						<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
 						<script src="https://yastatic.net/share2/share.js"></script>
-						<div class="social img-none-dectope ya-share2" data-bare data-services="vkontakte,facebook,twitter,odnoklassniki" data-image="http://akkreditiv.lenta.ru/assets/images/SB/Social.jpg" data-description="" data-title="" data-url=""></div>
+						<div class="social img-none-dectope ya-share2" id="ya-share2" data-bare data-services="vkontakte,facebook,twitter,odnoklassniki" data-image="http://akkreditiv.lenta.ru/assets/images/SB/Social.jpg" data-description="" data-title="" data-url=""></div>
+						<!-- <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+						<script src="https://yastatic.net/share2/share.js"></script> -->
 					</div>
 					<div class="section-right">
-						<div class="social section-history-img-not-mobile ya-share2" data-services="vkontakte,facebook,twitter,odnoklassniki" data-bare data-image="http://akkreditiv.lenta.ru/assets/images/SB/Social.jpg" data-description="" data-title="" data-url=""></div>
+						<!-- <div class="my-share" id="my-share2"></div> -->
+						<div class="social section-history-img-not-mobile ya-share2" id="ya-share2" data-services="vkontakte,facebook,twitter,odnoklassniki" data-bare data-image="http://akkreditiv.lenta.ru/assets/images/SB/Social.jpg" data-description="" data-title="" data-url=""></div>
 						<img src="./assets/images/SB/section1.png" alt="" class="section1">
 						<img src="./assets/images/SB/cloud1.png" alt="" class="cloud cloud1" data-aos="fade-left">
 						<img src="./assets/images/SB/cloud2.png" alt="" class="cloud cloud2 section-history-img-not-mobile" data-aos="fade-left">
@@ -64,7 +67,7 @@
 						<img src="./assets/images/SB/cloud4.png" alt="" class="cloud cloud4 section-history-img-not-mobile" data-aos="fade-left">
 					</div>
 				</div>
-				<div class="section section-history section-history1">
+				<div class="section section-history section-history1" id="section-history1">
 					<div class="section-left">
 						<div class="section-history-title" data-aos="flip-up">
 							<span class="section-history-number">История №1</span>
@@ -79,11 +82,11 @@
 							<ul>
 								<li>При аккредитивной форме расчета покупатель может открыть аккредитив в&nbsp;Екатеринбурге, а&nbsp;продавец&nbsp;&mdash; раскрыть аккредитив в&nbsp;Москве. Для осуществления расчетов сторонам необязательно быть рядом.</li>
 							</ul>
-							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-1', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-1', });">Узнать больше</a>
-							<a href="javascript:void(0);" class="btn-top-section-history" onclick="gtag('event', 'history-1-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-1-btn-top', });"></a>
+							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-1', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-1', });" target="blank" target="blank">Узнать больше</a>
+							<a href="#section-history1" class="btn-top-section-history" onclick="gtag('event', 'history-1-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-1-btn-top', });"></a>
 
 						</div>
-						<button class="section-history-btn" data-aos="zoom-in-right" data-aos-duration="500">Читать далее</button>
+						<button class="section-history-btn js-section-history-btn" data-aos="zoom-in-right" data-aos-duration="500">Читать далее</button>
 					</div>
 					<div class="section-right">
 						<img src="./assets/images/SB/section-history-img1.png" alt="" class="section-history-img1" data-aos="zoom-in">
@@ -91,7 +94,7 @@
 						<img src="./assets/images/SB/section-history-img3.png" alt="" class="section-history-img3 section-history-img-not-mobile" data-aos="zoom-in-down">
 					</div>
 				</div>
-				<div class="section section-history section-history2">
+				<div class="section section-history section-history2" id="section-history2">
 					<div class="section-left">
 						<div class="section-history-title" data-aos="fade-right">
 							<span class="section-history-number">История №2</span>
@@ -108,10 +111,10 @@
 								<li>А&nbsp;знали&nbsp;ли вы, что при наличии уполномоченного отделения открыть аккредитив можно в&nbsp;районе полярного круга, а&nbsp;подать документы для исполнения в&nbsp;любом другом городе Российской Федерации? Для осуществления расчетов сторонам необязательно быть рядом.</li>
 								<li>Аккредитив&nbsp;&mdash; это безналичный способ расчета, поэтому в&nbsp;наличности нет необходимости.</li>
 							</ul>
-							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-2', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-2', });">Узнать больше</a>
-							<a href="javascript:void(0);" class="btn-top-section-history" onclick="gtag('event', 'history-2-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-2-btn-top', });"></a>
+							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-2', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-2', });" target="blank">Узнать больше</a>
+							<a href="#section-history2" class="btn-top-section-history" onclick="gtag('event', 'history-2-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-2-btn-top', });"></a>
 						</div>
-						<button class="section-history-btn" data-aos="zoom-in-right" data-aos-duration="500">Читать далее</button>
+						<button class="section-history-btn js-section-history-btn" data-aos="zoom-in-right" data-aos-duration="500">Читать далее</button>
 					</div>
 					<div class="section-right">
 						<img src="./assets/images/SB/section-history-img4.png" alt="" class="section-history-img4" data-aos="zoom-out-up">
@@ -120,7 +123,7 @@
 						<img src="./assets/images/SB/section-history-img7.png" alt="" class="section-history-img-window-right section-history-img7" data-aos="zoom-out-down">
 					</div>
 				</div>
-				<div class="section section-history section-history3">
+				<div class="section section-history section-history3" id="section-history3">
 					<div class="section-left">
 						<div class="section-history-title" data-aos="fade-left">
 							<span class="section-history-number">История №3</span>
@@ -134,10 +137,10 @@
 							<ul>
 								<li>Пользуясь аккредитивом, этой ситуации можно было&nbsp;бы избежать, так как покупатель транспортного средства сначала регистрирует автомобиль на&nbsp;себя, банк это проверяет и&nbsp;только после этого перечисляет денежные средства продавцу.</li>
 							</ul>
-							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-3', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-3', });">Узнать больше</a>
-							<a href="javascript:void(0);" class="btn-top-section-history" onclick="gtag('event', 'history-3-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-3-btn-top', });"></a>
+							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-3', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-3', });" target="blank">Узнать больше</a>
+							<a href="#section-history3" class="btn-top-section-history" onclick="gtag('event', 'history-3-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-3-btn-top', });"></a>
 						</div>
-						<button class="section-history-btn" data-aos="flip-up" data-aos-duration="500">Читать далее</button>
+						<button class="section-history-btn js-section-history-btn" data-aos="flip-up" data-aos-duration="500">Читать далее</button>
 						<img src="./assets/images/SB/children.png" alt="" class="childr section-history-img-not-mobile" data-aos="fade-down"     data-aos-easing="linear"      data-aos-duration="1500">
 					</div>
 					<div class="section-right">
@@ -145,7 +148,7 @@
 						<img src="./assets/images/SB/section-history-img9.png" alt="" class="section-history-img-window-right section-history-img9" data-aos="zoom-in-down"	>
 					</div>
 				</div>
-				<div class="section section-history section-history4">
+				<div class="section section-history section-history4" id="section-history4">
 					<div class="section-left">
 						<div class="section-history-title" data-aos="zoom-in-right">
 							<span class="section-history-number">История №4</span>
@@ -160,10 +163,10 @@
 							<ul>
 								<li>С&nbsp;аккредитивом покупатель и&nbsp;продавец самостоятельно определяют перечень документов, который будет служить основанием для Банка в&nbsp;переводе денежных средств продавцу. Отказ одной из&nbsp;сторон в&nbsp;дополнительной проверке чистоты сделки/товара/услуги может говорить о&nbsp;его недобросовестности</li>
 							</ul>
-							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-4', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-4', });">Узнать больше</a>
-							<a href="javascript:void(0);" class="btn-top-section-history" onclick="gtag('event', 'history-4-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-4-btn-top', });"></a>
+							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-4', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-4', });" target="blank">Узнать больше</a>
+							<a href="#section-history4" class="btn-top-section-history" onclick="gtag('event', 'history-4-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-4-btn-top', });"></a>
 						</div>
-						<button class="section-history-btn" data-aos="flip-right">Читать далее</button>
+						<button class="section-history-btn js-section-history-btn" data-aos="flip-right">Читать далее</button>
 					</div>
 					<div class="section-right">
 						<img src="./assets/images/SB/section-history-img10.png" alt="" class="section-history-img10" data-aos="fade-up"     data-aos-duration="800">
@@ -171,7 +174,7 @@
 						<img src="./assets/images/SB/section-history-img12.png" alt="" class="section-history-img-window-right section-history-img12" data-aos="fade-left"     data-aos-duration="1600">
 					</div>
 				</div>
-				<div class="section section-history section-history5">
+				<div class="section section-history section-history5" id="section-history5">
 					<div class="section-left">
 						<div class="section-history-title" data-aos="fade-right">
 							<span class="section-history-number">История №5</span>
@@ -185,10 +188,10 @@
 							<ul>
 								<li>Покупатель продает квартиру, в&nbsp;которой проживает, и&nbsp;покупает новую, при этом денежные средства от&nbsp;продажи идут напрямую на&nbsp;покупку новой квартиры. Все продавцы и&nbsp;покупатели в&nbsp;цепочке проводимых сделок получают денежные средства/объекты недвижимости одновременно</li>
 							</ul>
-							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-5', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-5', });">Узнать больше</a>
-							<a href="javascript:void(0);" class="btn-top-section-history" onclick="gtag('event', 'history-5-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-5-btn-top', });"></a>
+							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-5', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-5', });" target="blank">Узнать больше</a>
+							<a href="#section-history5" class="btn-top-section-history" onclick="gtag('event', 'history-5-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-5-btn-top', });"></a>
 						</div>
-						<button class="section-history-btn" data-aos="fade-left">Читать далее</button>
+						<button class="section-history-btn js-section-history-btn" data-aos="fade-left">Читать далее</button>
 						<img src="./assets/images/SB/flower.png" alt="" class="flower section-history-img-not-mobile " data-aos="fade-up" data-aos-duration="1000">
 					</div>
 					<div class="section-right">
@@ -198,7 +201,7 @@
 						<img src="./assets/images/SB/section-history-img16.png" alt="" class="section-history-img-window-right section-history-img16" data-aos="flip-right">
 					</div>
 				</div>
-				<div class="section section-history section-history6">
+				<div class="section section-history section-history6" id="section-history6">
 					<div class="section-left">
 						<div class="section-history-title" data-aos="zoom-in-left">
 							<span class="section-history-number">История №6</span>
@@ -213,10 +216,10 @@
 							<ul>
 								<li>Важно знать, что при оформлении сделки с&nbsp;помощью аккредитива, покупатель имеет возможность рассчитаться с&nbsp;продавцом, который находится за&nbsp;пределами&nbsp;РФ, в&nbsp;валюте и&nbsp;может быть уверен, что продавец получит денежные средства только тогда, когда машина станет его собственностью.</li>
 							</ul>
-							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-6', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-6', });">Узнать больше</a>
-							<a href="javascript:void(0);" class="btn-top-section-history" onclick="gtag('event', 'history-6-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-6-btn-top', });"></a>
+							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-6', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-6', });" target="blank">Узнать больше</a>
+							<a href="#section-history6" class="btn-top-section-history" onclick="gtag('event', 'history-6-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-6-btn-top', });"></a>
 						</div>
-						<button class="section-history-btn" data-aos="fade-up" data-aos-duration="1000">Читать далее</button>
+						<button class="section-history-btn js-section-history-btn" data-aos="fade-up" data-aos-duration="1000">Читать далее</button>
 					</div>
 					<div class="section-right">
 						<img src="./assets/images/SB/section-history-img17.png" alt="" class="section-history-img17" data-aos="flip-up">
@@ -225,7 +228,7 @@
 						<img src="./assets/images/SB/section-history-img20.png" alt="" class="section-history-img-window-right section-history-img20" data-aos="flip-down">
 					</div>
 				</div>
-				<div class="section section-history section-history7">
+				<div class="section section-history section-history7" id="section-history7">
 					<div class="section-left">
 						<div class="section-history-title" data-aos="flip-up">
 							<span class="section-history-number">История №7</span>
@@ -241,10 +244,10 @@
 							<ul>
 								<li>Продавцы бывают разными, однако, вы&nbsp;можете не&nbsp;сомневаться в&nbsp;исходе сделки, ведь оформляя ее&nbsp;с&nbsp;помощью аккредитива, покупатель самостоятельно определяет перечень документов, при предоставлении которых продавец получит денежные средства.</li>
 							</ul>
-							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-7', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-7', });">Узнать больше</a>
-							<a href="javascript:void(0);" class="btn-top-section-history" onclick="gtag('event', 'history-7-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-7-btn-top', });"></a>
+							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-7', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-7', });" target="blank">Узнать больше</a>
+							<a href="#section-history7" class="btn-top-section-history" onclick="gtag('event', 'history-7-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-7-btn-top', });"></a>
 						</div>
-						<button class="section-history-btn" data-aos="fade-down" data-aos-duration="1000">Читать далее</button>
+						<button class="section-history-btn js-section-history-btn" data-aos="fade-down" data-aos-duration="1000">Читать далее</button>
 					</div>
 					<div class="section-right">
 						<img src="./assets/images/SB/section-history-img21.png" alt="" class="section-history-img21" data-aos="fade-down" data-aos-duration="500">
@@ -253,7 +256,7 @@
 						<img src="./assets/images/SB/section-history-img24.png" alt="" class="section-history-img-window-right section-history-img24" data-aos="fade-down" data-aos-duration="2000">
 					</div>
 				</div>
-				<div class="section section-history section-history8">
+				<div class="section section-history section-history8" id="section-history8">
 					<div class="section-left">
 						<div class="section-history-title" data-aos="fade-right" data-aos-duration="500">
 							<span class="section-history-number">История №8</span>
@@ -270,16 +273,16 @@
 							<ul>
 								<li>Аккредитив имеет важную особенность: он&nbsp;предоставляет возможность проведения альтернативной сделки на&nbsp;приобретение недвижимости за&nbsp;рубежом</li>
 							</ul>
-							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-8', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-8', });">Узнать больше</a>
-							<a href="javascript:void(0);" class="btn-top-section-history" onclick="gtag('event', 'history-8-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-8-btn-top', });"></a>
+							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-8', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-8', });" target="blank">Узнать больше</a>
+							<a href="#section-history8" class="btn-top-section-history" onclick="gtag('event', 'history-8-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-8-btn-top', });"></a>
 						</div>
-						<button class="section-history-btn" data-aos="fade-right" data-aos-duration="1000">Читать далее</button>
+						<button class="section-history-btn js-section-history-btn" data-aos="fade-right" data-aos-duration="1000">Читать далее</button>
 					</div>
 					<div class="section-right">
 						<img src="./assets/images/SB/section-history-img25.png" alt="" class="section-history-img25" data-aos="zoom-out" data-aos-duration="500">
 					</div>
 				</div>
-				<div class="section section-history section-history9">
+				<div class="section section-history section-history9" id="section-history9">
 					<img src="./assets/images/SB/section-history-img27.png" alt="" class="section-history-img27 section-history-img-not-mobile" data-aos="fade-up" data-aos-duration="500">
 					<img src="./assets/images/SB/section-history-img28.png" alt="" class="section-history-img28 section-history-img-not-mobile" data-aos="zoom-in" data-aos-duration="600">
 					<img src="./assets/images/SB/dove2.png" alt="" class="img-mobile-section92 img-none-dectope">
@@ -299,10 +302,10 @@
 							<ul>
 								<li>У&nbsp;аккредитива есть большое преимущество: стоимость аккредитива в&nbsp;сделках по&nbsp;продаже доли в&nbsp;бизнесе, как правило, дешевле, чем оформление через нотариуса.</li>
 							</ul>
-							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-9', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-9', });">Узнать больше</a>
-							<a href="javascript:void(0);" class="btn-top-section-history" onclick="gtag('event', 'history-9-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-9-btn-top', });"></a>
+							<a href="http://www.sberbank.ru/ru/person/additional/accreditive" class="section-history-btn" onclick="gtag('event', 'to-learn-more-9', { 'event_category': 'external', 'event_action': 'click', 'event_label': 'to-learn-more-9', });" target="blank">Узнать больше</a>
+							<a href="#section-history9" class="btn-top-section-history" onclick="gtag('event', 'history-9-btn-top', { 'event_category': 'internal', 'event_action': 'click', 'event_label': 'history-9-btn-top', });"></a>
 						</div>
-						<button class="section-history-btn" data-aos="fade-left" data-aos-duration="500">Читать далее</button>
+						<button class="section-history-btn js-section-history-btn" data-aos="fade-left" data-aos-duration="500">Читать далее</button>
 					</div>
 					<div class="section-right">
 						<img src="./assets/images/SB/section-history-img26.png" alt="" class="section-history-img26" data-aos="fade-left" data-aos-duration="500">
