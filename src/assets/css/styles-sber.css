@@ -55,7 +55,7 @@ html {
 }
 .section p a {
   color: #333333;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .section p a:hover {
   text-decoration: none;
