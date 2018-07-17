@@ -2,21 +2,20 @@ $(".js-section-history-btn").click(function () {
     $(this).parents('.section-history').find('.section-history-hide-text').show();
     $(this).parents('.section-history').addClass('active');
     $(this).hide();
+    $("#nav-sber").scrollspy({ offset: -400 });
 });
 $(".btn-top-section-history").click(function () {
     $(this).parents('.section-history').find('.section-history-hide-text').hide();
     $(this).parents('.section-history').find('.section-history-btn').show();
     $(this).parents('.section-history').removeClass('active');
+    $("#nav-sber").scrollspy({ offset: -400 });
 });
-$(".btn-top-section-history").click(function () {
-    $(this).parents('.section-history').find('.section-history-hide-text').hide();
-    $(this).parents('.section-history').find('.section-history-btn').show();
-    $(this).parents('.section-history').removeClass('active');
-});
-$('.section-history').on('scrollSpy:enter', function() {
-    console.log('enter:', $(this).attr('id'));
-});
-$('.section-history').scrollSpy();
+// $('.section-history').on('scrollSpy:enter', function() {
+//     console.log('enter:', $(this).attr('id'));
+//     $('ul li.'+$(this).attr('id')).addClass('active');
+// });
+
+$("#nav-sber").scrollspy({ offset: -400 });
 Ya.share2('#ya-share2', {
     hooks: {
         onshare: function (name) {

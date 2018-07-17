@@ -1,225 +1,206 @@
-/**
- * Extend jquery with a scrollspy plugin.
- * This watches the window scroll and fires events when elements are scrolled into viewport.
- *
- * throttle() and getTime() taken from Underscore.js
- * https://github.com/jashkenas/underscore
- *
- * @author Copyright 2013 John Smart
- * @license https://raw.github.com/thesmart/jquery-scrollspy/master/LICENSE
- * @see https://github.com/thesmart
- * @version 0.1.2
+/*!
+ * Scrollspy Plugin
+ * Author: r3plica
+ * Licensed under the MIT license
  */
-(function($) {
+; (function ($, window, document, undefined) {
 
-	var jWindow = $(window);
-	var elements = [];
-	var elementsInView = [];
-	var isSpying = false;
-	var ticks = 0;
-	var offset = {
-		top : 0,
-		right : 0,
-		bottom : 0,
-		left : 0,
-	}
+    // Add our plugin to fn
+    $.fn.extend({
 
-	/**
-	 * Find elements that are within the boundary
-	 * @param {number} top
-	 * @param {number} right
-	 * @param {number} bottom
-	 * @param {number} left
-	 * @return {jQuery}		A collection of elements
-	 */
-	function findElements(top, right, bottom, left) {
-		var hits = $();
-		$.each(elements, function(i, element) {
-			var elTop = element.offset().top,
-				elLeft = element.offset().left,
-				elRight = elLeft + element.width(),
-				elBottom = elTop + element.height();
+        // Scrollspy is the name of the plugin
+        scrollspy: function (options) {
 
-			var isIntersect = !(elLeft > right ||
-				elRight < left ||
-				elTop > bottom ||
-				elBottom < top);
+            // Define our defaults
+            var defaults = {
+                namespace: 'scrollspy',
+                activeClass: 'active',
+                animate: false,
+                offset: 0,
+                container: window
+            };
 
-			if (isIntersect) {
-				hits.push(element);
-			}
-		});
+            // Add any overriden options to a new object
+            options = $.extend({}, defaults, options);
 
-		return hits;
-	}
+            // Adds two numbers together
+            var add = function (ex1, ex2) {
+                return parseInt(ex1, 10) + parseInt(ex2, 10);
+            }
 
-	/**
-	 * Called when the user scrolls the window
-	 */
-	function onScroll() {
-		// unique tick id
-		++ticks;
+            // Find our elements
+            var findElements = function (links) {
 
-		// viewport rectangle
-		var top = jWindow.scrollTop(),
-			left = jWindow.scrollLeft(),
-			right = left + jWindow.width(),
-			bottom = top + jWindow.height();
+                // Declare our array
+                var elements = [];
 
-		// determine which elements are in view
-		var intersections = findElements(top+offset.top, right+offset.right, bottom+offset.bottom, left+offset.left);
-		$.each(intersections, function(i, element) {
-			var lastTick = element.data('scrollSpy:ticks');
-			if (typeof lastTick != 'number') {
-				// entered into view
-				element.triggerHandler('scrollSpy:enter');
-			}
+                // Loop through the links
+                for (var i = 0; i < links.length; i++) {
 
-			// update tick id
-			element.data('scrollSpy:ticks', ticks);
-		});
+                    // Get our current link
+                    var link = links[i];
 
-		// determine which elements are no longer in view
-		$.each(elementsInView, function(i, element) {
-			var lastTick = element.data('scrollSpy:ticks');
-			if (typeof lastTick == 'number' && lastTick !== ticks) {
-				// exited from view
-				element.triggerHandler('scrollSpy:exit');
-				element.data('scrollSpy:ticks', null);
-			}
-		});
+                    // Get our hash
+                    var hash = $(link).attr("href");
 
-		// remember elements in view for next tick
-		elementsInView = intersections;
-	}
+                    // Store our has as an element
+                    var element = $(hash);
 
-	/**
-	 * Called when window is resized
-	*/
-	function onWinSize() {
-		jWindow.trigger('scrollSpy:winSize');
-	}
+                    // If we have an element matching the hash
+                    if (element.length > 0) {
 
-	/**
-	 * Get time in ms
-   * @license https://raw.github.com/jashkenas/underscore/master/LICENSE
-	 * @type {function}
-	 * @return {number}
-	 */
-	var getTime = (Date.now || function () {
-		return new Date().getTime();
-	});
+                        // Get our offset
+                        var top = Math.floor(element.offset().top),
+                            bottom = top + Math.floor(element.outerHeight());
 
-	/**
-	 * Returns a function, that, when invoked, will only be triggered at most once
-	 * during a given window of time. Normally, the throttled function will run
-	 * as much as it can, without ever going more than once per `wait` duration;
-	 * but if you'd like to disable the execution on the leading edge, pass
-	 * `{leading: false}`. To disable execution on the trailing edge, ditto.
-	 * @license https://raw.github.com/jashkenas/underscore/master/LICENSE
-	 * @param {function} func
-	 * @param {number} wait
-	 * @param {Object=} options
-	 * @returns {Function}
-	 */
-	function throttle(func, wait, options) {
-		var context, args, result;
-		var timeout = null;
-		var previous = 0;
-		options || (options = {});
-		var later = function () {
-			previous = options.leading === false ? 0 : getTime();
-			timeout = null;
-			result = func.apply(context, args);
-			context = args = null;
-		};
-		return function () {
-			var now = getTime();
-			if (!previous && options.leading === false) previous = now;
-			var remaining = wait - (now - previous);
-			context = this;
-			args = arguments;
-			if (remaining <= 0) {
-				clearTimeout(timeout);
-				timeout = null;
-				previous = now;
-				result = func.apply(context, args);
-				context = args = null;
-			} else if (!timeout && options.trailing !== false) {
-				timeout = setTimeout(later, remaining);
-			}
-			return result;
-		};
-	};
+                        // Add to our array
+                        elements.push({ element: element, hash: hash, top: top, bottom: bottom });
+                    }                    
+                }
 
-	/**
-	 * Enables ScrollSpy using a selector
-	 * @param {jQuery|string} selector  The elements collection, or a selector
-	 * @param {Object=} options	Optional.
-											throttle : number -> scrollspy throttling. Default: 100 ms
-											offsetTop : number -> offset from top. Default: 0
-											offsetRight : number -> offset from right. Default: 0
-											offsetBottom : number -> offset from bottom. Default: 0
-											offsetLeft : number -> offset from left. Default: 0
-	 * @returns {jQuery}
-	 */
-	$.scrollSpy = function(selector, options) {
-		selector = $(selector);
-		selector.each(function(i, element) {
-			elements.push($(element));
-		});
-		options = options || {
-			throttle: 100
-		};
+                // Return our elements
+                return elements;
+            };
 
-		offset.top = options.offsetTop || 0;
-		offset.right = options.offsetRight || 0;
-		offset.bottom = options.offsetBottom || 0;
-		offset.left = options.offsetLeft || 0;
+            // Find our link from a hash
+            var findLink = function (links, hash) {
 
-		var throttledScroll = throttle(onScroll, options.throttle || 100);
-		var readyScroll = function(){
-			$(document).ready(throttledScroll);
-		};
+                // For each link
+                for (var i = 0; i < links.length; i++) {
 
-		if (!isSpying) {
-			jWindow.on('scroll', readyScroll);
-			jWindow.on('resize', readyScroll);
-			isSpying = true;
-		}
+                    // Get our current link
+                    var link = $(links[i]);
 
-		// perform a scan once, after current execution context, and after dom is ready
-		setTimeout(readyScroll, 0);
+                    // If our hash matches the link href
+                    if (link.attr("href") === hash) {
 
-		return selector;
-	};
+                        // Return the link
+                        return link;
+                    }
+                }
+            };
 
-	/**
-	 * Listen for window resize events
-	 * @param {Object=} options						Optional. Set { throttle: number } to change throttling. Default: 100 ms
-	 * @returns {jQuery}		$(window)
-	 */
-	$.winSizeSpy = function(options) {
-		$.winSizeSpy = function() { return jWindow; }; // lock from multiple calls
-		options = options || {
-			throttle: 100
-		};
-		return jWindow.on('resize', throttle(onWinSize, options.throttle || 100));
-	};
+            // Reset classes on our elements
+            var resetClasses = function (links) {
 
-	/**
-	 * Enables ScrollSpy on a collection of elements
-	 * e.g. $('.scrollSpy').scrollSpy()
-	 * @param {Object=} options	Optional.
-											throttle : number -> scrollspy throttling. Default: 100 ms
-											offsetTop : number -> offset from top. Default: 0
-											offsetRight : number -> offset from right. Default: 0
-											offsetBottom : number -> offset from bottom. Default: 0
-											offsetLeft : number -> offset from left. Default: 0
-	 * @returns {jQuery}
-	 */
-	$.fn.scrollSpy = function(options) {
-		return $.scrollSpy($(this), options);
-	};
+                // For each link
+                for (var i = 0; i < links.length; i++) {
 
-})(jQuery);
+                    // Get our current link
+                    var link = $(links[i]);
+
+                    // Remove the active class
+                    link.parent().removeClass(options.activeClass);
+                }
+            };
+
+            // For each scrollspy instance
+            return this.each(function () {
+
+                // Declare our global variables
+                var element = this,
+                    container = $(options.container);
+
+                // Get our objects
+                var links = $(element).find('a');
+
+                // Loop through our links
+                for (var i = 0; i < links.length; i++) {
+
+                    // Get our current link
+                    var link = links[i];
+
+                    // Bind the click event
+                    $(link).on("click", function (e) {
+                        
+                        // Get our target
+                        var target = $(this).attr("href"),
+                            $target = $(target);
+
+                        // If we have the element
+                        if ($target.length > 0) {
+
+                            // Get it's scroll position
+                            var top = add($target.offset().top, options.offset);
+                            
+                            // If animation is on
+                            if (options.animate) {
+
+                                // Animate our scroll
+                                $('html, body').animate({ scrollTop: top }, 1000);
+                            } else {
+
+                                // Scroll to our position
+                                window.scrollTo(0, top);
+                            }
+                            
+                            // Prevent our link
+                            e.preventDefault();
+                        }
+                    });
+                }
+
+                // Get our elements
+                var elements = findElements(links);
+                
+                // Add a listener to the window
+                container.bind('scroll.' + options.namespace, function () {
+                    
+                    // Get the position and store in an object
+                    var position = {
+                        top: add($(this).scrollTop(), Math.abs(options.offset)),
+                        left: $(this).scrollLeft()
+                    };
+
+                    // Create a variable for our link
+                    var link;
+
+                    // Loop through our elements
+                    for (var i = 0; i < elements.length; i++) {
+
+                        // Get our current item
+                        var current = elements[i];
+
+                        // If we are within the boundries of our element
+                        if (position.top >= current.top && position.top < current.bottom) {
+                            
+                            // get our element
+                            var hash = current.hash;
+
+                            // Get the link
+                            link = findLink(links, hash);
+                            
+                            // If we have a link
+                            if (link) {
+
+                                // If we have an onChange function
+                                if (options.onChange) {
+
+                                    // Fire our onChange function 
+                                    options.onChange(current.element, $(element), position);
+                                }
+
+                                // Reset the classes on all other link
+                                resetClasses(links);
+
+                                // Add our active link to our parent
+                                link.parent().addClass(options.activeClass);
+
+                                // break our loop 
+                                break;
+                            }
+                        }
+                    }
+
+                    // If we don't have a link and we have a exit function
+                    if (!link && options.onExit) {
+                        
+                        // Fire our onChange function 
+                        options.onExit($(element), position);
+                    }
+                });
+
+            });
+        }
+    });
+})(jQuery, window, document, undefined);
