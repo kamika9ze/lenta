@@ -8,7 +8,15 @@ $(".btn-top-section-history").click(function () {
     $(this).parents('.section-history').find('.section-history-btn').show();
     $(this).parents('.section-history').removeClass('active');
 });
-$('.section-history .section-left > p').append('<span class="points">..</span>');
+$(".btn-top-section-history").click(function () {
+    $(this).parents('.section-history').find('.section-history-hide-text').hide();
+    $(this).parents('.section-history').find('.section-history-btn').show();
+    $(this).parents('.section-history').removeClass('active');
+});
+$('.section-history').on('scrollSpy:enter', function() {
+    console.log('enter:', $(this).attr('id'));
+});
+$('.section-history').scrollSpy();
 Ya.share2('#ya-share2', {
     hooks: {
         onshare: function (name) {
