@@ -140,6 +140,13 @@ html {
   text-align: left;
   margin-bottom: 42px;
 }
+.section-history ul li a {
+  font-family: "PTSerif";
+  color: #333333;
+}
+.section-history ul li a:hover {
+  text-decoration: none;
+}
 .section-history .points {
   display: inline-block;
 }
